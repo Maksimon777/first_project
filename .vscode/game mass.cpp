@@ -30,6 +30,7 @@ int main()
     for(i=0;i<10;i++)
     {
         int g=rand()%10,h=rand()%10;
+        if(a[g][h]!='x')
         a[g][h]='Q';
     }
 
@@ -47,13 +48,11 @@ int main()
 
             case 's':
             {
-                if(y<9)
-                {
                 a[y][x]='o';
                 y++;
                 a[y][x]='x';
                  vivod(a);
-                }
+                 if(y<1||y>9)
                 break;
             }
             case 'w':
@@ -63,7 +62,7 @@ int main()
                 y--;
                 a[y][x]='x';
                  vivod(a);
-                if(y<9)
+                 if(y<1||y>9)
                 break;
             }
             case 'a':
@@ -72,16 +71,16 @@ int main()
                 x--;
                 a[y][x]='x';
                  vivod(a);
-                 if(x<9)
+                 if(x<1||x>9)
                 break;
             }
             case 'd':
             {
-                if(x<9)
                 a[y][x]='o';
                 x++;
                 a[y][x]='x';
                  vivod(a);
+                 if(x<1||x>9)
                 break;
             }
             case 'q':
