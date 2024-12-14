@@ -40,6 +40,7 @@ int main()
         if(_kbhit())
         {
             vivod(a);
+            
             char simv = _getch();
             switch (simv)
             {
