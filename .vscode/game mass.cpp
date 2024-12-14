@@ -108,9 +108,6 @@ int main()
             }
             case 'q':
                 return 0;
-
-
-
             }
         }
     }
