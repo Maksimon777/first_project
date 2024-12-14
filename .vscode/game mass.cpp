@@ -16,7 +16,7 @@ void vivod(char a[10][10])
     }
 }
 
-void vivodscore(string score)
+void vivodscore(int score)
 {
     cout <<endl<<endl<< "Score: " << score ;
 }
@@ -30,7 +30,7 @@ int main()
     a[i][j]='o';
     int x=0,y=0;
     a[y][x]='x';
-    string score="0";
+    int score=0;
 
     for(i=0;i<10;i++)
     {
@@ -56,6 +56,8 @@ int main()
                 {
                 a[y][x]='o';
                 y++;
+                if(a[y][x]=='Q')
+                score++;
                 a[y][x]='x';
                  vivod(a);
                  vivodscore(score);
@@ -68,6 +70,8 @@ int main()
                 {
                 a[y][x]='o';
                 y--;
+                if(a[y][x]=='Q')
+                score++;
                 a[y][x]='x';
                  vivod(a);
                  vivodscore(score);
@@ -80,6 +84,8 @@ int main()
                 {
                 a[y][x]='o';
                 x--;
+                if(a[y][x]=='Q')
+                score++;
                 a[y][x]='x';
                  vivod(a);
                  vivodscore(score);
@@ -92,6 +98,8 @@ int main()
                 {
                 a[y][x]='o';
                 x++;
+                if(a[y][x]=='Q')
+                score++;
                 a[y][x]='x';
                  vivod(a);
                  vivodscore(score);
