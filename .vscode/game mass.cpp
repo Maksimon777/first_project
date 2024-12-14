@@ -16,6 +16,11 @@ void vivod(char a[10][10])
     }
 }
 
+void vivodscore(string score)
+{
+    cout <<endl<<endl<< "Score: " << score ;
+}
+
 int main()
 {
     srand(time(NULL));
@@ -25,7 +30,7 @@ int main()
     a[i][j]='o';
     int x=0,y=0;
     a[y][x]='x';
-
+    string score="0";
 
     for(i=0;i<10;i++)
     {
@@ -37,50 +42,60 @@ int main()
     
     while(true)
     {
-        
         if(_kbhit())
         {
             vivod(a);
-            
+            vivodscore(score);
             char simv = _getch();
             switch (simv)
             {
 
             case 's':
             {
+                if(y<9)
+                {
                 a[y][x]='o';
                 y++;
                 a[y][x]='x';
                  vivod(a);
-                 if(y<1||y>9)
+                 vivodscore(score);
+                }
                 break;
             }
             case 'w':
             {
-                
+                if(y>0)
+                {
                 a[y][x]='o';
                 y--;
                 a[y][x]='x';
                  vivod(a);
-                 if(y<1||y>9)
+                 vivodscore(score);
+                }
                 break;
             }
             case 'a':
             {
+                if(x>0)
+                {
                 a[y][x]='o';
                 x--;
                 a[y][x]='x';
                  vivod(a);
-                 if(x<1||x>9)
+                 vivodscore(score);
+                }
                 break;
             }
             case 'd':
             {
+                if(x<9)
+                {
                 a[y][x]='o';
                 x++;
                 a[y][x]='x';
                  vivod(a);
-                 if(x<1||x>9)
+                 vivodscore(score);
+                }
                 break;
             }
             case 'q':
