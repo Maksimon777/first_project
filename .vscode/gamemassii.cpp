@@ -5,11 +5,11 @@
 #include <windows.h>
 using namespace std;
 
-HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void setColor(int color)
 {
-    SetConsoleTextAttribute(hConsole, color);
+    SetConsoleTextAttribute(console, color);
 }
 
 

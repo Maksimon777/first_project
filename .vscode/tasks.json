@@ -1,5 +1,21 @@
 {
+    "version": "2.0.0",
     "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/EHsc",
+                "/Fe:",
+                "gamemassii.exe",
+                "gamemassii.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
         {
             "type": "cppbuild",
             "label": "C/C++: cl.exe сборка активного файла",
@@ -21,7 +37,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "компилятор: cl.exe"
+            "detail": "Задача создана отладчиком."
         }
     ]
 }
